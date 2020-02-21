@@ -13,7 +13,8 @@ rails new koalapp \
 --skip-test \
 --skip-javascript \
 --skip-bootsnap \
---skip-webpack-install
+--skip-webpack-install \
+--database=postgresql
 ```
 
 ...and if you want to skip even MOAH [here's the link](https://gist.github.com/eliotsykes/ace0222174804372b51a) to available options.
