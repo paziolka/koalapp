@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Rails installation
+sort: 3
 ---
 
 In order to create our koalapp let's follow [Michał Młoźniak](https://github.com/ronin) [way of doing]( https://twitter.com/roninek/status/1219196994964639744) it to prevent too many things get installed and you being lost just at the beginning of your journey:

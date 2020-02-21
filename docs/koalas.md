@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Koalas 🐨
+sort: 2
 ---
 
 Accoring to [livescience](https://www.livescience.com/27401-koalas-facts.html):
