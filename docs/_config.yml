@@ -1,15 +1,15 @@
 permalink:           pretty
 
 # Setup
-title:               Koalapp
+title:               Koalapp 🐨
 tagline:             How to create rails API workshop for koalas
 description:         🔥 Build based on lanyon theme for jekyll and jekyll static site generator for ruby 🔥
-url:                 https://paziolka.github.io
-baseurl:             /koalapp
+# url:                 https://paziolka.github.io
+# baseurl:             /koalapp
 
 # Uncomment for local jekyll serve
-# url:                 https://paziolka.github.io/koalapp
-# baseurl:             ''
+url:                 https://paziolka.github.io/koalapp
+baseurl:             ''
 paginate:            100
 
 # About/contact
