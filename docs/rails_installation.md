@@ -31,10 +31,12 @@ rails new koalapp \
 
 ## Configure your database
 
-1) edit /config/database.yml and checkout `ENV['KOALAPP_DATABASE_PASSWORD']`
+1) edit /config/database.yml and see that there is an environment variable: `ENV['KOALAPP_DATABASE_PASSWORD']`
 
-2) add your key using `EDITOR=vim rails credentials:edit` command (or `EDITOR=anything_else` for another preffered editor)
-just add KOALAPP_DATABASE_PASSWORD: xxx
+2) add your environment variable using `EDITOR=vim rails credentials:edit` command (or `EDITOR=anything_else` for another preffered editor)
+
+* if you want to check if you have the editor installed, just type in its command to terminal, e.g. `nano`, `subl` etc.
+* just add KOALAPP_DATABASE_PASSWORD: xxx at the end of the file
 
 3) `rake db:create`
 

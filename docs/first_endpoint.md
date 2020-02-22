@@ -29,12 +29,32 @@ You'lle see something like:
 ```
 
 The most important for us are now (edit these files and checkout what's inside):
-* app/controllers/about_us_controller.rb
-* get 'about_us/index' in config/routes.rb
-* app/views/about_us/index.html.erb
+* **app/controllers/about_us_controller.rb**
+
+```ruby
+class AboutUsController < ApplicationController
+  def index
+  end
+end
+```
+
+* get 'about_us/index' in **config/routes.rb**
+
+```ruby
+Rails.application.routes.draw do
+  get 'about_us/index'
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end
+
+```
+
+* and **app/views/about_us/index.html.erb**
+
 Later you don't have to use rails generator since it tends to create to much, as you can see from above.
 
 3) Run `rails s` and see your page!
+
+* To see the url of a new controller, type in `rake routes` in your terminal
 
 4) Change index method in controller to:
 
@@ -43,17 +63,32 @@ def index
   render json: { key: 'value' }
 end
 ```
-And see what happens.
 
-5) Add `root 'about_us#index'` in the config/routes.rb file, so "Welcome aboard" is not default page anymore.
+And see what happens in your app (if it's `Routing Error` in your browser, it also shows you the correct route to go to; **remember, no .html at the end of the route**).
 
-6) Run `rake routes`
+5) Add `root 'about_us#index'` in the `config/routes.rb` file, so "Welcome aboard" is not default page anymore.
+Now `localhost:3000` also shows you `about_us` page
+
+6) Run `rake routes` in your terminal again, to see the routes:
+
+```bash
+Prefix Verb   URI Pattern               Controller#Action
+          root GET    /                         about_us#index
+about_us_index GET    /about_us/index(.:format) about_us#index
+```
 
 ## MVC - the C and V parts: ...AND VIEW
 
-1) Install rabl and oj from instruction in [here](https://github.com/nesquena/rabl).
+1) Install rabl and oj from instruction in [gem documentation](https://github.com/nesquena/rabl#installation).
+
+OK, do not `gem install rabl`, cause the app won't see it. Add
+
+```ruby
+gem 'rabl'
+gem 'oj'
+```
+to your Gemfile and run `bundle install` and please do so, when server is not working (`ctrl+C`). Teh run your server again.
 
 2) Change `app/views/about_us/index.html.erb` => `app/views/about_us/index.rabl`
-
-Add there `node(:key) { 'value' }` and see the result under `http://localhost:3000/`
+Add there `node(:key) { 'value' }` and see the result under `http://localhost:3000/`.
 
