@@ -8,7 +8,7 @@ sort: 4
 
 1) `rails generate scaffold trees species:string description:string`
 
-You'lle see something like:
+You'll see something like:
 ```bash
       invoke  active_record
       create    db/migrate/20200221232008_create_trees.rb
@@ -41,9 +41,10 @@ You'lle see something like:
 
 Checkout controller and routes again (new methods, e.g. [resources](https://guides.rubyonrails.org/routing.html)).
 
-2) Run `rake routes` and check the result of resource method in `routes.rb`
+2) Run `rake routes` and check the result of the resource method in `routes.rb`
 
-3)
+3) Run migrations
+
 ```bash
 ▶ rake db:migrate
 == 20200221232008 CreateTrees: migrating ======================================
@@ -58,7 +59,9 @@ Checkout controller and routes again (new methods, e.g. [resources](https://guid
 
 4) Go to `http://localhost:3000/trees` and plant some new 🎄🌳🌲🌴
 
-5) STop the server and run `rails c` to try new Active Record commands:
+Please add at least 5 trees with the form, you'll need them in next step.
+
+5) Stop the server and run `rails c` to try new Active Record commands:
 
 ```ruby
 Tree.all
